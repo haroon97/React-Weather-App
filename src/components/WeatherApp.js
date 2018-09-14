@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import Title from './Header';
 import SearchWeather from './SearchWeather';
 import Details from './Details';
 
@@ -63,9 +63,8 @@ class WeatherApp extends React.Component {
     const subTitle = 'Explore the weather around the globe';
     return (
       <div>
-        <Header title={title} subTitle={subTitle}/>
-        <SearchWeather city={this.city} country={this.country} onSubmit={this.onSubmit}/>
-        {this.state.error && <p>Please enter a valid value</p>}
+        <Title title={title} subTitle={subTitle}/>
+        <SearchWeather city={this.city} country={this.country} onSubmit={this.onSubmit} error={this.state.error}/>
         {this.state.isFetch && <Details data={this.state.weather} Celcius={this.Celcius} Kelvin={this.Kelvin} Faranheit={this.Faranheit} temp={this.state.temp}/>}
       </div>
     );

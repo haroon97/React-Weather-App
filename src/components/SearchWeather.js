@@ -1,13 +1,20 @@
 import React from 'react';
+import { Button, Form, Label } from 'semantic-ui-react';
 
 const SearchWeather = (props) => {
   return (
-    <div>
-      <form onSubmit={props.onSubmit}>
-        <input onChange={props.city} type='text' placeholder='Enter the city name' name='city' />
-        <input onChange={props.country} type='text' placeholder='Enter country code' name='country'/>
-        <button>Submit</button>
-      </form>
+    <div className='form'>
+      <Form onSubmit={props.onSubmit}>
+        <Form.Field>
+          {props.error && <Label pointing='below'>Please enter a value</Label>}
+          <Form.Input label='City name' placeholder='City name' width={6}  onChange={props.city}  name='city' />
+          </Form.Field>
+          <Form.Field>
+          {props.error && <Label pointing='below'>Please enter a value</Label>}
+          <Form.Input label='Country code' placeholder='Country code' width={6} onChange={props.country} name='country'/>
+          </Form.Field>
+        <Button type='submit'>Submit</Button>
+     </Form>
     </div>
   );
 }
