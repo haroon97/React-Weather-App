@@ -3,6 +3,9 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  background-image: url('https://images.pexels.com/photos/1054222/pexels-photo-1054222.jpeg?cs=srgb&dl=background-background-image-clear-sky-1054222.jpg&fm=jpg');
+  background-size: cover;
 }
 
 .header {
@@ -14,4 +17,19 @@ body {
 .form {
   margin-left: 19em;
   margin-top: 3em;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.statistics {
+  margin-left: 5em;
+  margin-top: 2em;
+}
+
+.p {
+  font-size: 2.5em;
+  margin-top: 1em;
+  font-family: 'Acme';
 }

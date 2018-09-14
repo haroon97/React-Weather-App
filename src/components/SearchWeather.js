@@ -13,7 +13,7 @@ const SearchWeather = (props) => {
           {props.error && <Label pointing='below'>Please enter a value</Label>}
           <Form.Input label='Country code' placeholder='Country code' width={6} onChange={props.country} name='country'/>
           </Form.Field>
-        <Button type='submit'>Submit</Button>
+        <Button type='submit' positive>Submit</Button>
      </Form>
     </div>
   );
