@@ -18,8 +18,8 @@ const Details = (props) => {
       <Statistic>
         <Statistic.Value>
           {props.temp === 'celcius' && props.data.main.temp}
-          {props.temp === 'faranheit' && props.data.main.temp * 1.8 + 32}
-          {props.temp === 'kelvin' && props.data.main.temp + 273.15}
+          {props.temp === 'faranheit' && Math.round(props.data.main.temp * 1.8 + 32)}
+          {props.temp === 'kelvin' && Math.round(props.data.main.temp + 273.15)}
         </Statistic.Value>
         <Statistic.Label>Temperature</Statistic.Label>
       </Statistic>
@@ -49,9 +49,9 @@ const Details = (props) => {
 
     <WeatherComponent data={props.data}/>
       <div className='buttons'>
-      <Button onClick={props.Celcius} inverted color='red'>Celcius</Button>
-      <Button onClick={props.Faranheit} inverted color='orange'>Faranheit</Button>
-      <Button onClick={props.Kelvin} inverted color='blue'>Kelvin</Button>
+      <Button onClick={props.Celcius} color='red'>Celcius</Button>
+      <Button onClick={props.Faranheit} color='orange'>Faranheit</Button>
+      <Button onClick={props.Kelvin} color='blue'>Kelvin</Button>
       </div>
     </div>
   );
